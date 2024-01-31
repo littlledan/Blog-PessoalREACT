@@ -13,10 +13,10 @@ function Footer() {
   if(usuario.token !== '') {
     footerComponent = (
       <>
-        <div className="flex justify-center bg-[#9BCCFA] text-white">
+        <div className="flex justify-center bg-gradient-to-b from-[#000000] via-[#4B0082] to-[#4B0082] text-white">
           <div className="container flex flex-col items-center py-4">
-            <p className='text-xl font-bold'>Blog pessoal Generation | Copyright: {data}</p>
-            <p className='text-lg'>Acesse nossas redes sociais</p>
+            <p className='text-xl font-bold'>Geek News | Copyright: {data}</p>
+            <p className='text-lg'>Acesse minhas redes sociais</p>
             <div className='flex gap-2'>
               <LinkedinLogo size={48} weight='bold' />
               <InstagramLogo size={48} weight='bold' />

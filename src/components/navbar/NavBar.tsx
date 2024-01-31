@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
 import { toastAlerta } from '../../util/toastAlerta'
+import homeLogo from '../../assets/geek.jpg'
 
 
 function Navbar() {
@@ -19,10 +20,12 @@ function Navbar() {
 
     if(usuario.token !== "") {
       navbarComponent = (
-        <div className='w-full bg-[#9BCCFA] text-white flex justify-center py-4'>
+        <div className='w-full bg-gradient-to-b from-[#000000] via-[#4B0082] to-[#4B0082] text-white flex justify-center py-4'>
           <div className="container flex justify-between text-lg">
-            <Link to='/home' className='text-2xl font-bold uppercase'>Blog Pessoal</Link>
-
+            <div className='flex gap-1'>
+              <img src={homeLogo} alt="" className='w-10 h-10 rounded-full'/>
+              <Link to='/home' className='text-2xl font-bold '>Geek News</Link>
+            </div>
             <div className='flex gap-4'>
               <Link to='/postagens' className='hover:underline'>Postagens</Link>
               <Link to='/temas' className='hover:underline'>Temas</Link>

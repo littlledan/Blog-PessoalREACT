@@ -32,7 +32,7 @@ function DeletarPostagem() {
 
   useEffect(() => {
     if (token === '') {
-      alert('Você precisa estar logado')
+      toastAlerta('Você precisa estar logado', 'erro')
       navigate('/login')
     }
   }, [token])
@@ -65,19 +65,19 @@ function DeletarPostagem() {
   }
   return (
     <div className='container w-1/3 mx-auto'>
-      <h1 className='text-4xl text-center my-4'>Deletar postagem</h1>
+      <h1 className='text-4xl text-center my-4 text-white'>Deletar postagem</h1>
 
-      <p className='text-center font-semibold mb-4'>Você tem certeza de que deseja apagar a postagem a seguir?</p>
+      <p className='text-center font-semibold mb-4 text-white'>Você tem certeza de que deseja apagar a postagem a seguir?</p>
 
       <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-        <header className='py-2 px-6 bg-[#B0E0E6] text-white font-bold text-2xl'>Postagem</header>
+        <header className='py-2 px-6 bg-[#4F4F4F] text-white font-bold text-2xl'>Postagem</header>
         <div className="p-4">
-          <p className='text-xl h-full'>{postagem.titulo}</p>
+          <p className='text-xl h-full text-white'>{postagem.titulo}</p>
           <p>{postagem.texto}</p>
         </div>
         <div className="flex">
-          <button className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2' onClick={retornar}>Não</button>
-          <button className='w-full text-slate-100 bg-[#B0E0E6] hover:bg-[#9BCCFA] flex items-center justify-center' onClick={deletarPostagem}>
+          <button className='text-slate-100 bg-[#4F4F4F] hover:bg-[#696969] w-full py-2' onClick={retornar}>Não</button>
+          <button className='w-full text-slate-100 bg-[#000080] hover:bg-[#483D8B] flex items-center justify-center' onClick={deletarPostagem}>
             Sim
           </button>
         </div>

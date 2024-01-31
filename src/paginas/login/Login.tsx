@@ -38,11 +38,11 @@ function login(e: ChangeEvent<HTMLFormElement>) {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-gradient-to-r from-blue-800 via-blue-300 to-white-500">
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-gradient-to-r from-[#000000] via-[#4B0082] to-[#4B0082]">
         <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={login}>
-          <h2 className="text-slate-900 text-5xl ">Entrar</h2>
+          <h2 className="text-slate-900 text-5xl text-white">Entrar</h2>
           <div className="flex flex-col w-full">
-            <label htmlFor="usuario">Usuário</label>
+            <label htmlFor="usuario" className='text-white'>Usuário</label>
             <input
               type="text"
               id="usuario"
@@ -54,7 +54,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="senha">Senha</label>
+            <label htmlFor="senha" className='text-white'>Senha</label>
             <input
               type="password"
               id="senha"
@@ -65,7 +65,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
-          <button  type='submit' className="rounded bg-[#B0E0E6] hover:bg-[#9BCCFA] text-white w-1/2 py-2 flex justify-center">
+          <button  type='submit' className="rounded bg-[#000000] hover:bg-[#696969] text-white w-1/2 py-2 flex justify-center">
            {isLoading ? <RotatingLines
             strokeColor="white"
             strokeWidth="5"
@@ -78,9 +78,9 @@ function login(e: ChangeEvent<HTMLFormElement>) {
 
           <hr className="border-slate-800 w-full" />
 
-          <p>
+          <p className='text-white'>
             Ainda não tem uma conta?{' '}
-            <Link to="/cadastro" className="text-[#9BCCFA] hover:underline">
+            <Link to="/cadastro" className="text-[#000000] hover:underline">
               Cadastre-se
             </Link>
           </p>

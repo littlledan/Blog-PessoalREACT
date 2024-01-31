@@ -1,8 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import { AuthContext } from '../../../contexts/AuthContext'
 import Tema from '../../../models/Tema'
 import { buscar, deletar } from '../../../services/Service'
+import { toastAlerta } from '../../../util/toastAlerta'
 
 function DeletarTema() {
     const [tema, setTema] = useState<Tema>({} as Tema)
@@ -23,7 +24,7 @@ function DeletarTema() {
             })
         } catch (error: any) {
             if (error.toString().includes('403')) {
-                alert('O token expirou, favor logar novamente')
+                toastAlerta('O token expirou, favor logar novamente', 'info')
                 handleLogout()
             }
         }
@@ -31,7 +32,7 @@ function DeletarTema() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado')
+            toastAlerta('Você precisa estar logado', 'info')
             navigate('/login')
         }
     }, [token])
@@ -54,26 +55,26 @@ function DeletarTema() {
                 }
             })
 
-            alert('Tema apagado com sucesso')
+            toastAlerta('Tema apagado com sucesso', 'sucesso')
 
         } catch (error) {
-            alert('Erro ao apagar o Tema')
+            toastAlerta('Erro ao apagar o Tema', 'erro')
         }
 
         retornar()
     }
     return (
         <div className='container w-1/3 mx-auto'>
-            <h1 className='text-4xl text-center my-4'>Deletar tema</h1>
+            <h1 className='text-4xl text-center my-4 text-white'>Deletar tema</h1>
 
-            <p className='text-center font-semibold mb-4'>Você tem certeza de que deseja apagar o tema a seguir?</p>
+            <p className='text-center font-semibold mb-4 text-white'>Você tem certeza de que deseja apagar o tema a seguir?</p>
 
             <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-                <header className='py-2 px-6 bg-[#9BCCFA] text-white font-bold text-2xl'>Tema</header>
-                <p className='p-8 text-3xl bg-slate-200 h-full'>{tema.descricao}</p>
+                <header className='py-2 px-6 bg-[#4F4F4F] text-white font-bold text-2xl'>Tema</header>
+                <p className='p-8 text-3xl bg-black h-full text-white'>{tema.descricao}</p>
                 <div className="flex">
-                    <button className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2' onClick={retornar}>Não</button>
-                    <button className='w-full text-slate-100 bg-[#B0E0E6] hover:bg-[#9BCCFA] flex items-center justify-center' onClick={deletarTema}>
+                    <button className='text-slate-100 bg-[#4F4F4F] hover:bg-[#696969] w-full py-2' onClick={retornar}>Não</button>
+                    <button className='w-full text-slate-100 bg-[#000080] hover:bg-[#483D8B] flex items-center justify-center' onClick={deletarTema}>
                         Sim
                     </button>
                 </div>

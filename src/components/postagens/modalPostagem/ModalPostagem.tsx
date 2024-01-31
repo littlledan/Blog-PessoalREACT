@@ -8,8 +8,8 @@ import './ModalPostagem.css'
 function ModalPostagem() {
   return (
     <>
-      <Popup 
-      trigger={<button className='rounded bg-white text-[#9BCCFA] py-2 px-4'>Nova postagem</button>} modal>
+      <Popup
+      trigger={<button className='rounded bg-black text-[#ffffff] py-2 px-4'>Crie um post</button>} modal>
         <div>
           <FormularioPostagem />
         </div>
