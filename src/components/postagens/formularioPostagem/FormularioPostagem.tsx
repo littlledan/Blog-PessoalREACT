@@ -137,7 +137,7 @@ function FormularioPostagem() {
   const carregandoTema = tema.descricao === '';
 
   return (
-    <div className="container flex flex-col mx-auto items-center bg-gradient-to-b from-[#000000] via-[#4B0082] to-[#4B0082]">
+    <div className="container flex flex-col mx-auto items-center bg-gradient-to-b from-[#000000] via-[#4B0082] to-[#4B0082]" style={{ fontFamily: "Josefin Sans, sans-serif" }}>
       <h1 className="text-4xl text-center my-8 text-white">{id !== undefined ? 'Editar Postagem' : 'Cadastrar Postagem'}</h1>
 
       <form onSubmit={gerarNovaPostagem} className="flex flex-col w-1/2 gap-4">

@@ -64,7 +64,7 @@ function DeletarTema() {
         retornar()
     }
     return (
-        <div className='container w-1/3 mx-auto'>
+        <div className='container w-1/3 mx-auto' style={{ fontFamily: "Josefin Sans, sans-serif" }}>
             <h1 className='text-4xl text-center my-4 text-white'>Deletar tema</h1>
 
             <p className='text-center font-semibold mb-4 text-white'>Você tem certeza de que deseja apagar o tema a seguir?</p>

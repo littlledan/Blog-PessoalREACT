@@ -64,7 +64,7 @@ function DeletarPostagem() {
     retornar()
   }
   return (
-    <div className='container w-1/3 mx-auto'>
+    <div className='container w-1/3 mx-auto' style={{ fontFamily: "Josefin Sans, sans-serif" }}>
       <h1 className='text-4xl text-center my-4 text-white'>Deletar postagem</h1>
 
       <p className='text-center font-semibold mb-4 text-white'>Você tem certeza de que deseja apagar a postagem a seguir?</p>
@@ -73,7 +73,7 @@ function DeletarPostagem() {
         <header className='py-2 px-6 bg-[#4F4F4F] text-white font-bold text-2xl'>Postagem</header>
         <div className="p-4">
           <p className='text-xl h-full text-white'>{postagem.titulo}</p>
-          <p>{postagem.texto}</p>
+          <p className='text-white'>{postagem.texto}</p>
         </div>
         <div className="flex">
           <button className='text-slate-100 bg-[#4F4F4F] hover:bg-[#696969] w-full py-2' onClick={retornar}>Não</button>

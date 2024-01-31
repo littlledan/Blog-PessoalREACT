@@ -20,11 +20,11 @@ function Navbar() {
 
     if(usuario.token !== "") {
       navbarComponent = (
-        <div className='w-full bg-gradient-to-b from-[#000000] via-[#4B0082] to-[#4B0082] text-white flex justify-center py-4'>
+        <div className='w-full bg-gradient-to-b from-[#000000] via-[#4B0082] to-[#4B0082] text-white flex justify-center py-4' style={{ fontFamily: "Josefin Sans, sans-serif" }}>
           <div className="container flex justify-between text-lg">
             <div className='flex gap-1'>
               <img src={homeLogo} alt="" className='w-10 h-10 rounded-full'/>
-              <Link to='/home' className='text-2xl font-bold '>Geek News</Link>
+              <Link to='/home' className='text-4xl font-bold '   style={{ fontFamily: "Honk, sans-serif" }}>Geek News</Link>
             </div>
             <div className='flex gap-4'>
               <Link to='/postagens' className='hover:underline'>Postagens</Link>

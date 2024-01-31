@@ -97,7 +97,7 @@ function FormularioTema() {
   }, [token]);
 
   return (
-    <div className="container flex flex-col items-center justify-center mx-auto">
+    <div className="container flex flex-col items-center justify-center mx-auto" style={{ fontFamily: "Josefin Sans, sans-serif" }}>
       <h1 className="text-4xl text-center my-8 text-white">
         {id === undefined ? 'Cadastre um novo tema' : 'Editar tema'}
       </h1>
