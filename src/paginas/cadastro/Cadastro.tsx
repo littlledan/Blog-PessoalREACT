@@ -72,7 +72,7 @@ function Cadastro() {
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-gradient-to-l from-[#000000] via-[#4B0082] to-[#4B0082]">
         <div className="fundoCadastro hidden lg:block"></div>
-        <form className='flex justify-center items-center flex-col w-2/3 gap-3' onSubmit={cadastrarNovoUsuario}>
+        <form className='flex justify-center items-center flex-col w-2/3 gap-3 borda' onSubmit={cadastrarNovoUsuario}>
           <h2 className='text-slate-900 text-5xl text-white'>Cadastrar</h2>
           <div className="flex flex-col w-full">
             <label htmlFor="nome" className='text-white'>Nome</label>
